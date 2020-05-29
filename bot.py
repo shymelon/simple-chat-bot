@@ -1,7 +1,4 @@
-import string
-import sklearn
 from config import BOT_CONFIG, BOT_TOKEN, PROXY
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from nltk.metrics.distance import edit_distance
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
@@ -9,7 +6,6 @@ import random
 import re
 import string
 import collections
-from functools import reduce
 from sklearn.feature_extraction.text import CountVectorizer
 
 CLASSIFIER_THRESHOLD = 0.2
@@ -161,4 +157,4 @@ def main():
     updater.idle()
 
 
-print(generate_answer('Как играть?'))
+main()
